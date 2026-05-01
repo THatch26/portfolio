@@ -1,0 +1,133 @@
+.wrapper {
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.graph {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.nodeCircle {
+  transition: fill-opacity 0.2s, r 0.2s;
+  cursor: pointer;
+}
+
+.nodeCircle:hover {
+  fill-opacity: 0.35;
+  r: 26;
+}
+
+.tooltip {
+  position: absolute;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  pointer-events: none;
+  z-index: 20;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.tooltipName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.tooltipBar {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 4px;
+}
+
+.barSeg {
+  width: 16px;
+  height: 5px;
+  border-radius: 2px;
+  background: var(--border);
+}
+
+.barFilled {
+  background: var(--accent);
+}
+
+.tooltipYears {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.skeleton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+}
+
+.skeletonCircle {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: var(--skeleton-base);
+  overflow: hidden;
+  position: relative;
+}
+
+.skeletonCircle::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  animation: shimmer 1.8s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--skeleton-shine) 40%,
+    var(--skeleton-shine) 60%,
+    transparent 100%
+  );
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.errorText {
+  color: var(--error);
+  margin-bottom: 12px;
+}
+
+.retryBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.retryBtn:hover {
+  background: var(--accent-hover);
+}

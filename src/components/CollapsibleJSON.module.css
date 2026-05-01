@@ -1,0 +1,85 @@
+.node {
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 0;
+}
+
+.header:hover {
+  opacity: 0.85;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.bracket {
+  color: var(--text-secondary);
+}
+
+.key {
+  color: #a78bfa;
+}
+
+.colon {
+  color: var(--text-secondary);
+}
+
+.comma {
+  color: var(--text-secondary);
+}
+
+.string {
+  color: #34d399;
+}
+
+.number {
+  color: #60a5fa;
+}
+
+.boolean {
+  color: #fbbf24;
+}
+
+.null {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.ellipsis {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.children {
+  border-left: 1px solid var(--border);
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 1px 0;
+  padding-left: 8px;
+}
+
+.closing {
+  padding-left: 8px;
+}
